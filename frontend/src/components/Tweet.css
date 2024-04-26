@@ -1,0 +1,19 @@
+.tweet{
+    border: 2px solid gray;
+    padding: 5px;
+}
+
+.tweet-header{
+    display: flex;
+}
+
+.tweet-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-pb{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}

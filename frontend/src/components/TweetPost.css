@@ -1,0 +1,16 @@
+.post-form{
+    width:100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-form textarea{
+    width: 100%;
+    resize: vertical;
+    margin:0;
+}
+
+.post-form button{
+    width: 100%;
+}
