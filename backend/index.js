@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.get("/tweets", (req, res) => {
   console.log("/Tweets called");
-  const result = tweetsDb.tweets;
+  const result = tweetsDb.tweets.map((tweet, i) => {tweet.id = i; return tweet});
   res.status(200).send(result);
 });
 
@@ -39,6 +39,7 @@ app.post("/tweet", (req, res) => {
       name: "Me",
       screen_name: "me",
     },
+    id: tweetsDb.tweets.length,
     text: data.tweet,
     img: `https://unsplash.it/1280/720?image=${Math.floor(
       Math.random() * 1000

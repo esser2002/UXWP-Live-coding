@@ -22,8 +22,8 @@ export function Tweet(props){
 
     return <>
         <div className='tweet'>
-            <h1>{props.name}</h1>
-            Text i guess {props.name}
+            <h1>{props.user.name}</h1>
+            Text i guess {props.user.name} and {props.text}
             <div>
                 {props.thing.height} and {props.thing.width}
             </div>

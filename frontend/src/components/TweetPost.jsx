@@ -19,7 +19,7 @@ export default function TweetPost(props){
     }
 
     return<>
-        <form onSubmit={handleSubmit}>
+        <form className='post-form' onSubmit={handleSubmit}>
             <textarea 
             placeholder="Write a twwet"
             defaultValue={text}
