@@ -28,6 +28,7 @@ function App() {
             key={tweet.id}
             user={tweet.user}
             text={tweet.text}
+            img={tweet.img}
             thing={{height:3, width:"joe balls"}}
             />
           )
