@@ -17,6 +17,12 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+app.get("/system", (req, res) => {
+  console.log("/System called");
+  const result = tweetsDb.bigName;
+  res.status(200).send(result);
+});
+
 app.get("/tweets", (req, res) => {
   console.log("/Tweets called");
   const result = tweetsDb.tweets.map((tweet, i) => {tweet.id = i; return tweet});

@@ -5,11 +5,16 @@ import TweetPost from "./components/TweetPost"
 
 function App() {
   const [tweets, updateTweets] = useState([])
+  const [exampleSystem, updateSystem] = useState()
 
   async function fetchStuff(){ /*Something about promises */
     const response = await fetch("http://localhost:8080/tweets")
     const json = await response.json();
     updateTweets(json);
+
+    const secondResponse = await fetch("http://localhost:8080/system")
+    const sysJson = await secondResponse.json();
+    updateSystem(sysJson)
   }
 
   useEffect(() => {
@@ -18,10 +23,15 @@ function App() {
 
   return (
     <>
+
     <TweetPost setTweets={updateTweets}></TweetPost>
+    
+    Abekat 123
+    {exampleSystem.name}
 
     {/*json object */}
       <h1 style={{textAlign: "center"}}> React live coding2 </h1>
+
       <div id="content">
         {tweets.map((tweet) =>
           <Tweet
